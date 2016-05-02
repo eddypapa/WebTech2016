@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+#wrapper {
+	width: 1024px;
+	margin: 0 auto;
+}
+#header {
+	width: 1024px;
+	background: #234c7a;
+}
+#banner {
+	background-size: 50px 50px;
+	height: 25px;
+	text-align: center;
+	font-size: 24px;
+	color: #ffffff;
+}
+#name {
+	background-size: 50px 50px;
+	text-align: center;
+	font-size: 24px;
+	color: #ffffff;
+}
+#neptunkod{
+	background-size: 50px 50px;
+	text-align: center;
+	font-size: 24px;
+	color: #ffffff;	
+}
+#menuBar{
+	text-align: center;
+}
+#menuBar li{
+	display: inline-block;
+	width: 180px;
+	background: #32a17a;
+	border: 2px solid black;
+}
+#menuBar li:hover {
+	background: red;
+}
+#news{
+	font-size: 16px;
+	width: 230px;
+	background: #191533;
+	float: right;
+}
+.newsItem{
+	border: 1px solid black;
+	
+}
+#content{
+	text-align: justify;
+	background: #c26e9c; 
+	padding: 10px;
+	margin-right: 230px;
+}
+#footer{
+	background: #234c7a;
+	clear: both;
+}
+body {
+	background-image: src('./img/hatter.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+.h1 {
+	font-size: 18px;
+} 

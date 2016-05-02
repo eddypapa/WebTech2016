@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/style.css" type="text/css">
+
+<title>Webtech Beadandó</title>
+
+<script src="./js/jquery-2.1.4.min.js"></script>
+
+<script>
+	$(document).ready(
+			function() {
+				$('#menuBar a').each(
+						function() {
+							$(this).click(
+									function(event) {
+										event.preventDefault();
+										var page = $(this).attr('href');
+										$('#content').load(page);
+										if (page == "verziokData.html") {
+											$.getJSON("./js/version.json", function(data) {
+												$.each(data, function(key,value) {
+													console.log(value.name);
+													var line = "<tr><td>"
+															+ value.version
+															+ "</td><td>"
+															+ value.name
+															+ "</td></tr>";
+													$("#version-table").append(line);
+												});
+											});
+										}
+									});
+						});
+				$("#content").load("indexData.html");
+			});
+</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+
+			<div id="banner">Mac Os x Bemutató</div>
+			<div id="name">Tóth Ádám</div>
+			<div id="neptunkod">D3F1KK</div>
+			<div id="menuBar">
+				<ul>
+					<li><a href="indexData.html">Kezdő lap</a></li>
+					<li><a href="tortenetData.html">Története</a></li>
+					<li><a href="verziokData.html">Verziók</a></li>
+					<li><a href="videoData.html">Videók</a></li>
+					<li><a href="kovetelmenyData.html">Rendszerkövetelmények</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="news">
+			<div class="newsItem">
+				<div class="newsItem">
+					<table>
+						<tbody><tr>
+							<td align="left"><b>Fejlesztő:</b></td>
+							<td align="right">Apple Inc.</td>
+						</tr>
+						<tr>
+							<td align="left"><b>Forráskódja:</b></td>
+							<td align="right">Szigorúan Zárt</td>
+						</tr>
+						<tr>
+							<td align="left"><b>OS-család:</b></td>
+							<td align="right">Mac OS X</td>
+						</tr>
+						<tr>
+							<td align="left"><b>Aktuális verzió:</b></td>
+							<td align="right">10.11.4 El Capitan (2016)</td>
+						</tr>
+						<tr>
+							<td align="left"><b>Várható új verzió:</b></td>
+							<td align="right">2016 Q3</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<h2>Kíváncsi vagy az időre?</h2>
+				<p>
+					<button type="button" onclick="document.getElementById(&#39;demo&#39;).innerHTML = Date()">Kattints
+						ide, hogy megtudd az időt</button>
+				</p><p id="demo"></p>
+				<p></p>
+			</div>
+		</div>
+
+<div id="content">
+
+<table>
+		
+		<tr>
+			<td align="center"><img src="./img/macosx.jpg" width="470px" height="330px"></td>
+		</tr>
+</table></div>
+
+<div id="footer">
+			Készítette: Tóth Ádám, Miskolci Egyetem
+</div>
+</div>
+
+</body></html>
