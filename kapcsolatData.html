@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+		function kapcsolat(){
+			var nev=document.getElementsByName("nev")[0].value;
+			var mail=document.getElementsByName("mail")[0].value;
+			var kor=document.getElementsByName("targy")[0].value;
+			var ital=document.getElementsByName("uzenet")[0].value;
+	
+			if(nev.value ==""){
+				alert("A név mező nem lehet üres!");
+				nev.style="{color: red}"
+			}
+		alert(nev + " " + mail + " " + targy + " " + uzenet);
+		}
+</script>
+
+<div>
+	<form name="kapcsolat">
+	<p>Név		<input type="text" name="nev"></p>
+	<p>E-Mail		<input type="text" name="mail"></p>
+	
+	Tárgy 
+	<select name="targy" size="1">
+	<option value="fontos">Fontos</option>
+	<option value="semleges">Semleges</option>
+	<option value="hataridos">Haráridős</option>
+	
+	</select> 
+	- <input type="text" name="targy">
+	
+	<p>Üzenet		<input type="text" name="uzenet"></p>
+
+	<button type="button" onclick="kapcsolat();" value="ok">Elküld</button>
+	</form>
+</div>
